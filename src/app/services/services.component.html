@@ -1,0 +1,160 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <main class="page-content">
+            <div class="card" *ngIf='card1'>
+                <div class="content">
+                    <h2 class="title">Mobile Bill View</h2>
+                    <p class="copy">Get to know your recent recharge plans!</p><button (click)='generate([username])' class="btn">View</button>
+                </div>
+            </div>
+            <div class="card" *ngIf='card1'>
+                <div class="content">
+                    <h2 class="title">Electricity Bill History</h2>
+                    <p class="copy">View you past paid bills!</p><button class="btn" (click)='generateEb([username])'>View</button>
+                </div>
+            </div>
+            <div class="card" *ngIf='card1'>
+                <div class="content">
+                    <h2 class="title">View Booked Gas</h2>
+                    <p class="copy">View your bookings for LPG!</p><button class="btn" (click)='generateGas([username])'>View</button>
+                </div>
+            </div>
+            <div class="card" *ngIf='card1'>
+                <div class="content">
+                    <h2 class="title">DTH Bills View</h2>
+                    <p class="copy">View your DTH Bills!</p><button class="btn" (click)='generateDth([username])'>View</button>
+                </div>
+            </div>
+            <button class="btn" *ngIf='card1' routerLink='/dashboard'>Back to Dashboard</button>
+        </main>
+        <div *ngIf="mobileFlag">
+            <div>
+                <div class="container">
+                      <table class="rwd-table">
+                        <tbody>
+                          <tr>
+                            <th>Mail ID</th>
+                            <th>Mobile Number</th>
+                            <th>Plan</th>
+                          </tr>
+                          <tr *ngFor="let x of output">
+                            <td data-th="Mail ID">
+                              {{x.mail}}
+                            </td>
+                            <td data-th="Mobile Number">
+                              {{x.phno}}
+                            </td>
+                            <td data-th="Plan">
+                              {{x.plan}}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+            </div>
+            <button class="btn" (click)='back()'>Back to View</button>
+        </div>
+        <div *ngIf="ebFlag">
+            <div>
+                <div class="container">
+                      <table class="rwd-table">
+                        <tbody>
+                          <tr>
+                            <th>Mail ID</th>
+                            <th>Mobile Number</th>
+                            <th>Amount</th>
+                          </tr>
+                          <tr *ngFor="let x of output">
+                            <td data-th="Mail ID">
+                              {{x.mail}}
+                            </td>
+                            <td data-th="Mobile Number">
+                              {{x.phno}}
+                            </td>
+                            <td data-th="Amount">
+                              {{x.amount}}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+            </div>
+            <button class="btn" (click)='back()'>Back to View</button>
+        </div>
+        <div *ngIf="gasFlag">
+            <div>
+                <div class="container">
+                      <table class="rwd-table">
+                        <tbody>
+                          <tr>
+                            <th>Mail ID</th>
+                            <th>Mobile Number</th>
+                            <th>Company</th>
+                          </tr>
+                          <tr *ngFor="let x of output">
+                            <td data-th="Mail ID">
+                              {{x.mail}}
+                            </td>
+                            <td data-th="Mobile Number">
+                              {{x.phno}}
+                            </td>
+                            <td data-th="Company">
+                              {{x.plan}}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+            </div>
+            <button class="btn" (click)='back()'>Back to View</button>
+        </div>
+        <div *ngIf="dthFlag">
+            <div>
+                <div class="container">
+                      <table class="rwd-table">
+                        <tbody>
+                          <tr>
+                            <th>Mail ID</th>
+                            <th>Mobile Number</th>
+                            <th>Amount</th>
+                            <th>Operator</th>
+                          </tr>
+                          <tr *ngFor="let x of output">
+                            <td data-th="Mail ID">
+                              {{x.mail}}
+                            </td>
+                            <td data-th="Mobile Number">
+                              {{x.phone}}
+                            </td>
+                            <td data-th="Amount">
+                              {{x.amount}}
+                            </td>
+                            <td data-th="Operator">
+                                {{x.operator}}
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+            </div>
+            <button class="btn" (click)='back()'>Back to View</button>
+        </div>
+    </body>
+         <!-- Jquery needed -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script src="./script.js"></script>
+     
+     <!-- Function used to shrink nav bar removing paddings and adding black background -->
+         <script>
+             $(window).scroll(function() {
+                 if ($(document).scrollTop() > 50) {
+                     $('.nav').addClass('affix');
+                     console.log("OK");
+                 } else {
+                     $('.nav').removeClass('affix');
+                 }
+             });
+         </script>
+</html>

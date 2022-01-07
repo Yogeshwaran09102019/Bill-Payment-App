@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body *ngIf="viewFlag">
+        <div class="bg">
+            <div class="container">
+                <div class="head">
+                    <img src="https://res.cloudinary.com/dshrduotu/image/upload/v1558454846/webpro_swv9wn.png" alt="">
+                </div>
+                <div class="content">
+                    <p>A professional company to make your bill payments in an easy way!!</p>
+                    <button class="btn1 btn" routerLink='/register' (click)="click()">Create Account</button>
+                    <button class="btn2 btn" routerLink='/sign' (click)="click()">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<router-outlet></router-outlet>

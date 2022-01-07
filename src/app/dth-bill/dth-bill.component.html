@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Reistration Form</title>
+</head>
+<body>
+  <div class="bg"></div>
+    <form (submit)='dth($event)' >
+        <div class="container">
+          <h1>DTH Bill Payment</h1>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" id="mail" name="email" value={{username}} required>
+      
+            <label for="email"><b>Phone Number</b></label>
+            <br>
+           <select name="phoneCode" required>
+            <option selected hidden value="">Code</option>
+            <option value="66">+91</option>
+            <option value="66">+99</option>
+            <option value="66">+90</option>
+            <option value="66">+66</option>
+           </select>
+           <input type="phone" name="phone" id="phone" placeholder="812345678" required>
+           <br>
+           <label for="email"><b>Operator</b></label>
+           <select id="operator" name="phoneCode" required>
+            <option selected hidden value="">Operator</option>
+            <option value="Airtel DTH">Airtel DTH</option>
+            <option value="Tata Sky">Tata Sky</option>
+            <option value="UHD Dish">UHD Dish</option>
+            <option value="TAC Dish">TAC Dish</option>
+           </select>
+           <br>
+           <label for="email"><b>Amount</b></label>
+           <input type="text" placeholder="Enter Amount" id="plan" name="email" required>
+          <br>
+          <label for="email"><b>UPI</b></label>
+          <input type="text" placeholder="UPI PIN" id="upi" name="email" required>
+          <p>The Payment is secure <a href="#" style="color:dodgerblue">through SSL</a>.</p>
+      
+          <div class="clearfix">
+      
+            <button type="submit" class="btn">Pay</button>
+          </div>
+        </div>
+      </form>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/a9d231c901.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+  
+  
+
+    <body class="login-page">
+
+        <div class="bg">
+        <main>
+    
+          <div class="login-block">
+            <h1>Web Pro </h1>
+            <h1>Register your account</h1>
+    
+            <form (submit)='register($event)'>
+    
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user ti-user"></i></span>
+                  <input type="text" class="form-control" placeholder="Your name" name="t1" id="name">
+                </div>
+              </div>
+              
+              <hr class="hr-xs">
+    
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope ti-email"></i></span>
+                  <input type="text" class="form-control" placeholder="Your email address" name="t2" id="mail">
+                </div>
+              </div>
+              
+              <hr class="hr-xs">
+    
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock ti-unlock"></i></span>
+                  <input type="password" class="form-control" placeholder="Choose a password" name="t3" id="pass">
+                </div>
+              </div>
+              <hr class="hr-xs">
+    
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock ti-unlock"></i></span>
+                  <input type="password" class="form-control" placeholder="Choose a UPI" name="t3" id="upi">
+                </div>
+              </div>
+    
+              <button class="btn btn-primary btn-block" type="submit">Register</button>
+    
+              <div class="login-footer">
+                <h6>Or register with</h6>
+                <ul class="social-icons">
+                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+    
+            </form>
+          </div>
+    
+          <div class="login-links">
+            <p class="text-center">Already have an account? <a class="txt-brand" href="user-login.html">Login</a></p>
+          </div>
+    
+        </main>
+    </div>
+</body>
+        
+</html>

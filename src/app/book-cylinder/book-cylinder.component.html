@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Reistration Form</title>
+</head>
+<body>
+  <div class="bg"></div>
+    <form (submit)='gas($event)'>
+        <div class="container">
+          <h1>Book your LPG Fuel</h1>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" id="mail" name="email" value={{username}} required>
+      
+            <label for="email"><b>Phone Number</b></label>
+            <br>
+           <select name="phoneCode" required>
+            <option selected hidden value="">Code</option>
+            <option value="66">+91</option>
+            <option value="66">+99</option>
+            <option value="66">+90</option>
+            <option value="66">+66</option>
+           </select>
+           <input type="phone" name="phone" id="phone" placeholder="812345678" required>
+           <br>
+           <select name="company" id="plan" required>
+            <option selected hidden value="">Company</option>
+            <option value="HP LPG">HP LPG</option>
+            <option value="Bharath LPG">Bharath LPG</option>
+            <option value="Reliance LPG">Reliance LPG</option>
+            <option value="AK LPG">AK LPG</option>
+           </select>
+          <br>
+          <div class="clearfix">
+      
+            <button type="submit" class="btn">Book</button>
+          </div>
+        </div>
+      </form>
+
+</body>
+</html>
